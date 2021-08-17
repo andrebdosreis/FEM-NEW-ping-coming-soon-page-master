@@ -127,7 +127,7 @@ main {
                 justify-content: center;
             }
 
-                .area--social img {
+                .area--social div {
                     width: 30px;
                     height: 30px;
                     border-radius: 15px;
