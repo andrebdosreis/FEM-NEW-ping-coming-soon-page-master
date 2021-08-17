@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+    --pri-blue: hsl(223, 87%, 63%);
+    --sec-pale-blue: hsl(223, 100%, 88%);
+    --sec-light-red: hsl(354, 100%, 66%);
+    --neu-gray: hsl(0, 0%, 59%);
+    --neu-very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+}
+
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0px 15px;
+}
+
+    header {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 60px;
+    }
+
+        .area--copy {
+            text-align: center;
+        }
+
+            .area--copy h1 {
+                color: var(--neu-gray);
+                font-weight: 300;
+                padding-bottom: 30px;
+            }
+
+            .area--copy h1 span {
+                color: var(--neu-very-dark-blue);
+                font-weight: 700;
+            }
+
+            .area--copy p {
+                color: var(--neu-very-dark-blue);
+                padding-bottom: 45px;
+            }
+        
+        .area--form {
+            width: 100%;
+        }
+
+            label {
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto 200px;
+                margin-bottom: 90px;
+                position: relative;
+            }
+
+                #email {
+                    grid-column: 1 / 2;
+                    max-width: 100%;
+                    height: 60px;
+                    border-radius: 30px;
+                    padding-left: 30px;
+                    border: 1px solid var(--neu-gray);
+                    outline: none;
+                    color: var(--neu-gray);
+                }
+
+                    #email::placeholder {
+                        color: var(--neu-gray);
+                        font-size: 16px;
+                    }
+
+                    .errorBorder {border: 1px solid var(--sec-light-red) !important;}
+                    
+                    .errorIcon {
+                        position: absolute;
+                        top: 18px;
+                        right: 240px;
+                        display: none;
+                    }
+
+                    .errorMessage {
+                        grid-row: 2 / 3;
+                        color: var(--sec-light-red); 
+                        font-size: 12px;
+                        font-weight: 600;
+                        padding-left: 30px;
+                        margin-top: 10px;
+                    }
+
+                button {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;
+                    width: 200px;
+                    margin-left: 10px;
+                    background-color: var(--pri-blue);
+                    border: none;
+                    height: 60px;
+                    border-radius: 30px;
+                    color: #FFF;
+                    font-weight: 600;
+                    cursor: pointer;
+                    font-size: 16px;
+                }
+
+        .area--img {
+            width: 100%;
+            margin-bottom: 70px;
+        }
+
+            .area--img img {
+                width: 100%;
+            }
+
+        .footer {
+            width: 100%;
+        }
+
+            .area--social {
+                display: flex;
+                justify-content: center;
+            }
+
+                .area--social img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    background-repeat: none;
+                    background-size: cover;
+                }
+
+                    .fb {background-image: url(images/facebook-g.png);}
+                        .fb:hover {background-image: url(images/facebook.png);}
+
+                    .tt {
+                        background-image: url(images/twitter-g.png);
+                        margin: 0px 20px;
+                    }
+                        .tt:hover {background-image: url(images/twitter.png);}
+
+                    .ig {background-image: url(images/instagram-g.png);}
+                        .ig:hover {background-image: url(images/instagram.png);}
+
+            .area--copyright {
+                width: 100%;
+                text-align: center;
+                color: var(--neu-gray);
+                font-size: 16px;
+                margin-top: 30px;
+            }
+.attribution { font-size: 11px; text-align: center; margin-top: 30px;}
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none; font-weight: 600;}
+
+
+@media only screen and (max-width: 500px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    label {
+        grid-template-columns: 100%;
+    }
+
+        #email {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+            
+            .errorIcon {
+                position: absolute;
+                top: 18px;
+                right: 50px;
+            }
+
+            .errorMessage {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                margin-top: 0px;
+                text-align: center;
+                padding-left: 0px;
+                margin-bottom: 30px}
+
+        button {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            width: 100%;
+            margin-left: 0px;
+        }
+
+
+}
